@@ -31,10 +31,10 @@ public class testDriveNick extends LinearOpMode{
             y = -gamepad1.left_stick_y;
             rx = gamepad1.right_stick_x;
 
-            fLPower = y + rx + x;
-            fRPower = y - rx + x;
-            bLPower = y + rx - x;
-            bRPower = y - rx - x;
+            fLPower = y + x - rx;
+            fRPower = y - x - rx;
+            bLPower = y - x + rx;
+            bRPower = y + x - rx;
 
             divisor = Math.max(Math.max(Math.abs(fLPower), Math.abs(fRPower)), Math.max(Math.abs(bLPower), Math.abs(bRPower)));
             divisor = Math.max(divisor, 1);

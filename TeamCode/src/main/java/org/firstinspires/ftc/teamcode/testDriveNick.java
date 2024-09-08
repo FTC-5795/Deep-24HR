@@ -16,9 +16,9 @@ public class testDriveNick extends LinearOpMode{
         backRight = hardwareMap.get(DcMotorEx.class, "backRight");
 
         frontLeft.setDirection(DcMotorEx.Direction.FORWARD);
-        frontRight.setDirection(DcMotorEx.Direction.FORWARD);
+        frontRight.setDirection(DcMotorEx.Direction.REVERSE);
         backLeft.setDirection(DcMotorEx.Direction.FORWARD);
-        backRight.setDirection(DcMotorEx.Direction.FORWARD);
+        backRight.setDirection(DcMotorEx.Direction.REVERSE);
 
         double y, x, rx;
         double fLPower, fRPower, bLPower, bRPower;

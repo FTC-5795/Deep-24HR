@@ -1,13 +1,11 @@
 package org.firstinspires.ftc.teamcode;
 
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.gamepad1;
-
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class ServoControllerNick implements Subsystem {
+public class ServoController implements Subsystem {
     private CRServo intakeWheel;
     private Servo pivotServo;
 
@@ -16,7 +14,7 @@ public class ServoControllerNick implements Subsystem {
     private float pivotServoPosition = 0.5f; // Starting at midpoint (90 degrees)
 
     // Constructor to initialize with the HardwareMap and Gamepad
-    public ServoControllerNick(HardwareMap hardwareMap, Gamepad gamepad1) {
+    public ServoController(HardwareMap hardwareMap, Gamepad gamepad1) {
         this.hardwareMap = hardwareMap;
         this.gamepad1 = gamepad1;
     }

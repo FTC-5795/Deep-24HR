@@ -4,24 +4,24 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp
 public class MainTeleOp extends LinearOpMode {
-    private ServoControllerNick servoControllerNick;
-    private DriveTestNick driveTestNick;
+    private ServoController servoController;
+    private DriveChain driveChain;
 
     @Override
     public void runOpMode() throws InterruptedException {
         // Initialize subsystems with hardwareMap
-        servoControllerNick = new ServoControllerNick(hardwareMap, gamepad1);
-        driveTestNick = new DriveTestNick(hardwareMap, gamepad1);
+        servoController = new ServoController(hardwareMap, gamepad1);
+        driveChain = new DriveChain(hardwareMap, gamepad1);
 
         // Initialize subsystems
-        servoControllerNick.init();
-        driveTestNick.init();
+        servoController.init();
+        driveChain.init();
 
         waitForStart();
         // Run subsystems in the main loop
         while (opModeIsActive()) {
-            servoControllerNick.run();
-            driveTestNick.run();
+            servoController.run();
+            driveChain.run();
         }
     }
 }

@@ -1,20 +1,18 @@
 package org.firstinspires.ftc.teamcode;
 
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.gamepad1;
-
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class DriveTestNick implements Subsystem {
+public class DriveChain implements Subsystem {
     private DcMotorEx frontLeft, frontRight, backLeft, backRight;
 
     private HardwareMap hardwareMap;
     private final Gamepad gamepad1;
 
     // Constructor to initialize with the HardwareMap and Gamepad
-    public DriveTestNick(HardwareMap hardwareMap, Gamepad gamepad1) {
+    public DriveChain(HardwareMap hardwareMap, Gamepad gamepad1) {
         this.hardwareMap = hardwareMap;
         this.gamepad1 = gamepad1;
     }

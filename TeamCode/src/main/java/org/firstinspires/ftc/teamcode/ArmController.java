@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -26,6 +27,7 @@ public class ArmController implements Subsystem{
     @Override
     public void init(){
         armMotor = hardwareMap.get(DcMotorEx.class, "armMotor");
+        armMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
 
     @Override
@@ -36,7 +38,7 @@ public class ArmController implements Subsystem{
                 armPosition = 1;
             }
         }
-        
+
         if(armPosition == 1){
             setMotorPower(armPositionDegree1);
         } else if (armPosition == 2){

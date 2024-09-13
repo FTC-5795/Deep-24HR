@@ -5,14 +5,14 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class DriveChain implements Subsystem {
+public class DriveTrain implements Subsystem {
     private DcMotorEx frontLeft, frontRight, backLeft, backRight;
 
     private HardwareMap hardwareMap;
     private final Gamepad gamepad1;
 
     // Constructor to initialize with the HardwareMap and Gamepad
-    public DriveChain(HardwareMap hardwareMap, Gamepad gamepad1) {
+    public DriveTrain(HardwareMap hardwareMap, Gamepad gamepad1) {
         this.hardwareMap = hardwareMap;
         this.gamepad1 = gamepad1;
     }

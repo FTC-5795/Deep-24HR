@@ -32,7 +32,7 @@ public class ServoController implements Subsystem {
 
         if (gamepad1.x) {
             pivotServoPosition += 0.05;  // Increment position safely
-        } else if (gamepad1.y) {
+        } else {
             pivotServoPosition -= 0.05;  // Decrement position safely
         }
 

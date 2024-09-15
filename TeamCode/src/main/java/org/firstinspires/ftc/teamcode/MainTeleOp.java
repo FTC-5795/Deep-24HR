@@ -24,7 +24,6 @@ public class MainTeleOp extends LinearOpMode {
         // Run subsystems in the main loop
         while (opModeIsActive()) {
             servoController.run();
-            driveChain.run();
             armController.tempRun();
         }
     }
